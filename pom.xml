@@ -200,11 +200,16 @@
           	<artifactId>tomcat7-maven-plugin</artifactId>
           	<version>2.2</version>
           
+          	<!-- 通过项目右键 run as  maven build  main goals 中填入 tomcat7:redeploy命令即可部署成功  -->
           	<configuration>
-				<url>http://127.0.0.1/manager/text</url>
-				<username>deploy</username>
-				<password>deploy123456</password>
-			</configuration>
+           		<url>http://localhost/manager/text</url>                
+           		<username>tomcat</username>                               
+           		<password>tomcat</password>
+           		<port>80</port>
+           		<path>/How2jMavenSSM</path>                          
+           		<charset>UTF-8</charset>
+           		<encoding>UTF-8</encoding>
+       		</configuration>
         </plugin>
       </plugins>
     </pluginManagement>
